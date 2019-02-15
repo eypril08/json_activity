@@ -1,0 +1,22 @@
+/* line 1, ../sass/index.scss */
+body {
+  text-align: center;
+}
+
+/* line 5, ../sass/index.scss */
+.myInput {
+  height: 35px;
+  margin: 50px 0px;
+}
+
+/* line 9, ../sass/index.scss */
+.table-striped {
+  background-color: #c17171;
+  color: black;
+}
+
+/* line 13, ../sass/index.scss */
+th {
+  text-align: center;
+  color: white;
+}

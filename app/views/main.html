@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
+        <link rel="stylesheet" media="screen" href="@{'/public/sass/stylesheets/screen.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        #{get 'moreScripts' /}
+    </head>
+    <body>
+        #{doLayout /}
+        <div class="row">
+            <input class="myInput" type="text" name="one" id="one" Placeholder="CSN"/>
+            <input class="myInput" type="text" name="two" id="two" Placeholder="PSN"/>
+            <button class="btn btn-primary" type="submit" value="submit" onclick="myJson()">Check</button>
+        </div>
+        <div class="row">
+            <div class="container">
+                <table id="myTable" class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>CSN</th>
+                        <th>PSN</th>
+                        <th>ACTION</th>
+                    </tr>
+                    </thead>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!--modal-->
+        <div class="modal fade" id="myModal1" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">CSN & PSN</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>CSN: <input class="myInput" type="text" name="one" id="mdOne" Placeholder="CSN"/></p>
+                        <p>PSN: <input class="myInput" type="text" name="two" id="mdTwo" Placeholder="PSN"/></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button class="btn btn-primary" type="submit" value="submit" id="Update">Update</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
