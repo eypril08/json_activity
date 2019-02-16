@@ -4,57 +4,23 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
         <link rel="stylesheet" media="screen" href="@{'/public/sass/stylesheets/screen.css'}">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <link rel="shortcut icon" type="image/ico" href="https://twportal.blob.core.windows.net/images-xyzprinting/b2b/favicon.ico">
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         #{get 'moreScripts' /}
+        <script src="@{'/public/javascripts/index.js'}" type="text/javascript"></script>
+        <script src="@{'/public/javascripts/data.json'}" type="text/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
         #{doLayout /}
-        <div class="row">
-            <input class="myInput" type="text" name="one" id="one" Placeholder="CSN"/>
-            <input class="myInput" type="text" name="two" id="two" Placeholder="PSN"/>
-            <button class="btn btn-primary" type="submit" value="submit" onclick="myJson()">Check</button>
-        </div>
-        <div class="row">
-            <div class="container">
-                <table id="myTable" class="table table-striped">
-                    <thead>
-                    <tr>
-                        <th>CSN</th>
-                        <th>PSN</th>
-                        <th>ACTION</th>
-                    </tr>
-                    </thead>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <!--modal-->
-        <div class="modal fade" id="myModal1" role="dialog">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">CSN & PSN</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>CSN: <input class="myInput" type="text" name="one" id="mdOne" Placeholder="CSN"/></p>
-                        <p>PSN: <input class="myInput" type="text" name="two" id="mdTwo" Placeholder="PSN"/></p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                        <button class="btn btn-primary" type="submit" value="submit" id="Update">Update</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </body>
 </html>

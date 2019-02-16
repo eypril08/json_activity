@@ -1,0 +1,45 @@
+var myData = {
+"table5Data": [
+{
+"id": 284,
+"cartridge_sn": "3DP01FGBP0WTH6210133",
+"printer_sn": "3FM1WPEU4CA67S0366"
+},
+{
+"id": 285,
+"cartridge_sn": "3DP01FGBP0WTH6210133",
+"printer_sn": "3F1J0PUS5TH6290033"
+},
+{
+"id": 286,
+"cartridge_sn": "3DP01FGBP0WTH6210133",
+"printer_sn": "3F1JWPUS5TH6390096"
+},
+{
+"id": 287,
+"cartridge_sn": "3DP01FGBP0WTH6210133",
+"printer_sn": "3FM1WPEU4CA6890074"
+},
+{
+"id": 288,
+"cartridge_sn": "3DP01FGBP0WTH6210133",
+"printer_sn": "3F1J0PEU4TH61P0341"
+},
+{
+"id": 289,
+"cartridge_sn": "3DP01FGBP0WTH6210133",
+"printer_sn": "3F1J0PEU4TH58L0061"
+},
+{
+"id": 290,
+"cartridge_sn": "3DP01FGBA6BTB39C0015",
+"printer_sn": "3F1AWPTW0155950011"
+},
+{
+"id": 291,
+"cartridge_sn": "3DP01FGBA6BTB39C0015",
+"printer_sn": "3F10APTW1TH4AG0147"
+}
+],
+"lastSaveTime": "2019-2-1 16:46:15"
+}
