@@ -1,16 +1,29 @@
-    body{
-        text-align:center;
-    }
-
-    .myInput{
-		height: 35px;
-		margin: 50px 0px;
-	}
-	.table-striped{
-		background-color:#c17171;
-		color: black;
-	}
-	th{
-		text-align: center;
-		color: white;
-	}
+  body{
+  	text-align: center;
+  }
+  .myInput{
+  		height: 35px;
+  		margin: 50px 0px;
+  	}
+  	#myTable,.table-striped{
+  		background-color:#D37D6A;
+  		color: #F9D3AA;
+  		padding-left: 100px !important;
+  	}
+  	#myTable2, .table-striped{
+  		background-color:#70D0BD;
+  		color: #B5F5EC;
+  	}
+  	th{
+  		color: white;
+  		text-align: center;
+  		text-align: center !important;
+  	}
+  	tr{
+  		border: 1px solid white;
+  		text-align: center;
+  	}
+  	td{
+  		height: 40px;
+  		text-align: center !important;
+  	}

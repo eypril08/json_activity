@@ -4,7 +4,7 @@
 <div class="row">
     <input class="myInput" type="text" name="one" id="one" Placeholder="CSN"/>
     <input class="myInput" type="text" name="two" id="two" Placeholder="PSN"/>
-    <button class="btn btn-primary" type="submit" value="submit" onclick="myJson()">Check</button>
+    <button class="btn btn-primary" type="submit" value="submit" id="mySubmit" onclick="myJson()">Check</button>
 </div>
 <div class="row">
     <div class="container">
@@ -13,14 +13,23 @@
             <tr>
                 <th>CSN</th>
                 <th>PSN</th>
-                <th>ACTION</th>
+                <th colspan="2">ACTION</th>
             </tr>
             </thead>
+        </table>
+    </div>
+</div>
+
+<div class="row">
+    <div class="container">
+        <table id="myTable2" class="table table-striped">
+            <thead>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+                <th>CSN</th>
+                <th>PSN</th>
+                <th>TIME CHECK</th>
             </tr>
+            </thead>
         </table>
     </div>
 </div>

@@ -72,20 +72,40 @@ body {
   text-align: center;
 }
 
-/* line 5, ../sass/index.scss */
+/* line 4, ../sass/index.scss */
 .myInput {
   height: 35px;
   margin: 50px 0px;
 }
 
-/* line 9, ../sass/index.scss */
-.table-striped {
-  background-color: #c17171;
-  color: black;
+/* line 8, ../sass/index.scss */
+#myTable, .table-striped {
+  background-color: #D37D6A;
+  color: #F9D3AA;
+  padding-left: 100px !important;
 }
 
 /* line 13, ../sass/index.scss */
+#myTable2, .table-striped {
+  background-color: #70D0BD;
+  color: #B5F5EC;
+}
+
+/* line 17, ../sass/index.scss */
 th {
-  text-align: center;
   color: white;
+  text-align: center;
+  text-align: center !important;
+}
+
+/* line 22, ../sass/index.scss */
+tr {
+  border: 1px solid white;
+  text-align: center;
+}
+
+/* line 26, ../sass/index.scss */
+td {
+  height: 40px;
+  text-align: center !important;
 }
