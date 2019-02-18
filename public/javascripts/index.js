@@ -4,6 +4,7 @@ var checkList = false;
 var editList = false;
 
 
+
 //deleting extra characters
 
 	inputOneLength = 20;
@@ -67,8 +68,8 @@ var editList = false;
         var deleteBtn = 'Delete' + '<i class="fa fa-trash-o" aria-hidden="true"></i>';
 		var today = new Date();
 		var i;
-		
-		
+
+
 		if ((inputOne == "") || (inputTwo == "") ) 
 		{
 			alert("Please complete all required field!");
@@ -77,11 +78,13 @@ var editList = false;
 		{  
 			if(csnList.length == 0 || psnList.length == 0)
 			{
-				for (i = 0; i < myData.table5Data.length; i++) 
+				var dataLength = myData.table5Data.length;
+				var counter = 0;
+				for (i = 0; i < myData.table5Data.length; i++)
 				{
-					
 					if((inputOne == myData.table5Data[i].cartridge_sn) && (inputTwo == myData.table5Data[i].printer_sn))
 					{
+						counter =1;
 						var csnVal = myData.table5Data[i].cartridge_sn;
 								 csnList.push(csnVal);
 						var psnVal = myData.table5Data[i].printer_sn;
@@ -102,6 +105,13 @@ var editList = false;
 							cell4.innerHTML = deleteBtn;
 							alert("Success");
 							break;
+					}
+					if(i == dataLength - 1)
+					{
+						if(counter == 0){
+							console.log("last");
+							alert("Please eneter valid serial number!");
+						}
 					}
 				}
 			}
@@ -124,10 +134,13 @@ var editList = false;
 
 				if(!checkList)
 				{
+					var dataLength = myData.table5Data.length;
+					var counter = 0;
 					for (i = 0; i < myData.table5Data.length; i++) 
 					{
 						if((inputOne == myData.table5Data[i].cartridge_sn) && (inputTwo == myData.table5Data[i].printer_sn))
 						{
+							counter =1;
 							var csnVal = myData.table5Data[i].cartridge_sn;
 									 csnList.push(csnVal);
 							var psnVal = myData.table5Data[i].printer_sn;
@@ -146,7 +159,14 @@ var editList = false;
 								cell4.setAttribute("id","delBtn");
 								cell4.innerHTML = deleteBtn;
 								alert("Success");
-								break;
+						}
+
+						if(i == dataLength - 1)
+						{
+							if(counter == 0){
+								console.log("last");
+								alert("Please eneter valid serial number!");
+							}
 						}
 					}
 				}
@@ -161,13 +181,8 @@ var editList = false;
 			{
 				var table = document.getElementById("myTable2");
 				var row = table.insertRow(1);
-				var cell1 = row.insertCell(0);
-				var cell2 = row.insertCell(1);
-				var cell3 = row.insertCell(2);
 
-					cell1.innerHTML = myData.table5Data[i].cartridge_sn;
-					cell2.innerHTML = myData.table5Data[i].printer_sn;
-					cell3.innerHTML = today;
+					row.innerHTML = today;
 					break;
 			}
 		}
@@ -200,10 +215,10 @@ var editList = false;
 		}
 		index = $(this).parent().index();
 		document.getElementById("myTable").deleteRow(index);
-	});	
+	});
 
 //Update Button
-		
+
 	$("#Update").click(function()
 	{
 		var inputMod1 = $('#mdOne').val();
@@ -231,17 +246,21 @@ var editList = false;
 			}
 		
 			if(!editList)
+				var dataLength = myData.table5Data.length;
+				var counter = 0;
 			{
 				for (i = 0; i < myData.table5Data.length; i++) 
 				{
 					if((inputMod1 == myData.table5Data[i].cartridge_sn) && (inputMod2 == myData.table5Data[i].printer_sn))
 					{
+						counter =1;
 						var table = document.getElementById("myTable");
 						var csnVal = myData.table5Data[i].cartridge_sn;
 								 csnList.push(csnVal);
 								 psnList.shift();
 						var psnVal = myData.table5Data[i].printer_sn;
 								 psnList.push(psnVal);
+								  console.log(psnList);
 								 
 						var rows = document.getElementById("myTable").rows;
 							for (var j = 1; j < rows.length; j++)
@@ -257,6 +276,13 @@ var editList = false;
 						   
 						alert("Success");
 						$('#myModal1').modal('hide');
+					}
+					if(i == dataLength - 1)
+					{
+						if(counter == 0){
+							console.log("last");
+							alert("Please eneter valid serial number!");
+						}
 					}
 				}
 
