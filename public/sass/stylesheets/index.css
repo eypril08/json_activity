@@ -31,11 +31,12 @@ th {
 
 /* line 22, ../sass/index.scss */
 tr {
+  height: 30px;
   border: 1px solid white;
   text-align: center;
 }
 
-/* line 26, ../sass/index.scss */
+/* line 27, ../sass/index.scss */
 td {
   height: 40px;
   text-align: center !important;
